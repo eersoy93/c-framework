@@ -18,7 +18,7 @@ int main(void)
     float z = getDouble();
 
     print("Enter a string: ");
-    char * str1 = getString(MAX_STR_LEN);
+    char * str1 = getString();
 
     print("Max number between the integers: ");
     printlnInt(max(x, y));

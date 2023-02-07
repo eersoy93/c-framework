@@ -1,4 +1,5 @@
 #include "../include/io.h"
+#include "../include/strings.h"
 
 void print(char * text)
 {
@@ -42,28 +43,31 @@ void printlnInt(int value)
 
 double getDouble()
 {
-    double number;
-    scanf(" %lf", &number);
+    char number_str[MAX_STR_LEN] = { '\0' };
+    fgets(number_str, MAX_STR_LEN, stdin);
+    double number = atof(number_str);
     return number;
 }
 
 float getFloat()
 {
-    float number;
-    scanf(" %f", &number);
+    char number_str[MAX_STR_LEN] = { '\0' };
+    fgets(number_str, MAX_STR_LEN, stdin);
+    float number = (float)atof(number_str);
     return number;
 }
 
 int getInt()
 {
-    int number;
-    scanf(" %d", &number);
+    char number_str[MAX_STR_LEN] = { '\0' };
+    fgets(number_str, MAX_STR_LEN, stdin);
+    int number = atoi(number_str);
     return number;
 }
 
-char * getString(int len)
+char * getString()
 {
-    char * str = malloc(sizeof(char) * len);
-    scanf(" %s", str);
+    char * str = malloc(sizeof(char) * MAX_STR_LEN);
+    fgets(str, MAX_STR_LEN, stdin);
     return str;
 }

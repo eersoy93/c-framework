@@ -20,6 +20,6 @@ void printlnInt(int value);
 double getDouble();
 float getFloat();
 int getInt();
-char * getString(int len);
+char * getString();
 
 #endif
