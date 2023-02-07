@@ -1,4 +1,4 @@
-#include <math.h>
+#include "../include/maths.h"
 
 int max(int a, int b)
 {

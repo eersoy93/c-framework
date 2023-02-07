@@ -1,5 +1,4 @@
-#include <stdlib.h>
-#include <string.h>
+#include "../include/strings.h"
 
 char * reversedString(char * str)
 {

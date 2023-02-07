@@ -1,4 +1,4 @@
-#include <stdlib.h>
+#include "../include/memory.h"
 
 void freeMemoryArea(void * memory_area)
 {

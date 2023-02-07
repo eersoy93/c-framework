@@ -1,6 +1,10 @@
 #ifndef IO_H
 #define IO_H
 
+#include <stdarg.h>
+#include <stdio.h>
+#include <stdlib.h>
+
 void print(char *text);
 void println(char *text);
 

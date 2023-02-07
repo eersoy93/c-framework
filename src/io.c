@@ -1,6 +1,4 @@
-#include <stdarg.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include "../include/io.h"
 
 void print(char * text)
 {
@@ -42,7 +40,7 @@ void printlnInt(int value)
     printf("%d\n", value);
 }
 
-float getDouble()
+double getDouble()
 {
     double number;
     scanf(" %lf", &number);
