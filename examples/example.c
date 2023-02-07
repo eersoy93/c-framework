@@ -1,5 +1,6 @@
 #include "../include/io.h"
 #include "../include/maths.h"
+#include "../include/strings.h"
 
 int main(void)
 {
@@ -23,4 +24,8 @@ int main(void)
 
     print("Absolute value of the floating-point number: ");
     printlnDouble(absValue(z));
+
+    char * str1 = "Hello";
+    char * str2 = reversedString(str1);
+    println(str2);
 }

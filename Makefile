@@ -1,6 +1,7 @@
+C_SOURCES = $(wildcard src/*.c)
 
 all:
-	gcc examples/example.c src/io.c src/maths.c -o examples/example
+	gcc examples/example.c C_SOURCES -o examples/example
 
 run: all
 	examples/example
