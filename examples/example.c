@@ -13,7 +13,7 @@ int main(void)
     int y = getInt();
 
     print("Enter a floating-point number: ");
-    float z = getFloat();
+    float z = getDouble();
 
     print("Max number between the integers: ");
     printlnInt(max(x, y));
@@ -22,5 +22,5 @@ int main(void)
     printlnInt(min(x, y));
 
     print("Absolute value of the floating-point number: ");
-    printlnFloat(absValue(z));
+    printlnDouble(absValue(z));
 }
