@@ -1,5 +1,6 @@
 #include <stdarg.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 void print(char * text)
 {
@@ -60,4 +61,11 @@ int getInt()
     int number;
     scanf(" %d", &number);
     return number;
+}
+
+char * getString(int len)
+{
+    char * str = malloc(sizeof(char) * len);
+    scanf(" %s", str);
+    return str;
 }
