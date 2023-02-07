@@ -9,6 +9,14 @@ void println(char * text) {
     printf("%s\n", text);
 }
 
+void printDouble(double value) {
+    printf("%lf", value);
+}
+
+void printlnDouble(double value) {
+    printf("%lf\n", value);
+}
+
 void printFloat(float value) {
     printf("%f", value);
 }
@@ -23,6 +31,12 @@ void printInt(int value) {
 
 void printlnInt(int value) {
     printf("%d\n", value);
+}
+
+float getDouble() {
+    double number;
+    scanf(" %lf", &number);
+    return number;
 }
 
 float getFloat() {
