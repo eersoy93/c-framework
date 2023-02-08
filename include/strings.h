@@ -1,3 +1,5 @@
+// String-related functions header
+
 #ifndef STRINGS_H
 #define STRINGS_H
 

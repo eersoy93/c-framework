@@ -1,3 +1,5 @@
+// Other utility functions header
+
 #ifndef UTILITY_H
 #define UTILITY_H
 

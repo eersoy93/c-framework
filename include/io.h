@@ -1,3 +1,5 @@
+// Input-output functions header
+
 #ifndef IO_H
 #define IO_H
 

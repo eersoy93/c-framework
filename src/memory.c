@@ -1,3 +1,5 @@
+// Memory-related functions source
+
 #include "../include/memory.h"
 
 void freeMemoryArea(void * memory_area)

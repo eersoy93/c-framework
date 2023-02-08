@@ -1,3 +1,5 @@
+// String-related functions source
+
 #include "../include/strings.h"
 
 int stringCompare(char * str1, char * str2)

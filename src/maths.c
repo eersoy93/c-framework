@@ -1,3 +1,5 @@
+// Maths-related functions source
+
 #include "../include/maths.h"
 
 int max(int a, int b)

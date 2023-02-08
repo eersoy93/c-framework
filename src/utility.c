@@ -1,3 +1,5 @@
+// Other utility functions source
+
 #include "../include/utility.h"
 
 char * itoa(int value, char * str)

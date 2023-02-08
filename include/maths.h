@@ -1,3 +1,5 @@
+// Maths-related functions header
+
 #ifndef MATHS_H
 #define MATHS_H
 

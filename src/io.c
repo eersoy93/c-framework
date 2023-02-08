@@ -1,3 +1,5 @@
+// Input-output functions source
+
 #include "../include/io.h"
 #include "../include/strings.h"
 

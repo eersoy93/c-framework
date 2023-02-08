@@ -1,3 +1,5 @@
+// A stupid example for my C framework.
+
 #include "../include/io.h"
 #include "../include/maths.h"
 #include "../include/memory.h"
