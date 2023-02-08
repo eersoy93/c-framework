@@ -8,4 +8,9 @@ int min(int a, int b);
 
 float absValue(float x);
 
+int factorial(int n);
+
+int gcd(int a, int b);
+int lcm(int a, int b);
+
 #endif
