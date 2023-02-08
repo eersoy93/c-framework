@@ -69,5 +69,6 @@ char * getString()
 {
     char * str = malloc(sizeof(char) * MAX_STR_LEN);
     fgets(str, MAX_STR_LEN, stdin);
+    str[strcspn(str, "\r\n")] = '\0';
     return str;
 }
