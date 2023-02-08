@@ -11,6 +11,7 @@ double nth_root(double num, int n);
 double square_root(double num);
 
 double logarithm(double num);
+double logarithm2(double num);
 double logarithm10(double num);
 double naturalExponentional(double num);
 

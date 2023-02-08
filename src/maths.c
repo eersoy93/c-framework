@@ -30,6 +30,11 @@ double logarithm(double num)
     return log(num);
 }
 
+double logarithm2(double num)
+{
+    return log2(num);
+}
+
 double logarithm10(double num)
 {
     return log10(num);
