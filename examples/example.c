@@ -15,7 +15,7 @@ int main(void)
     int y = getInt();
 
     print("Enter a floating-point number: ");
-    float z = getDouble();
+    double z = getDouble();
 
     print("Enter a string: ");
     char * str1 = getString();
