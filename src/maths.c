@@ -99,12 +99,12 @@ double radiansToDegrees(double num)
 
 double maxValue(double a, double b)
 {
-    return (a > b) ? a : b;
+    return fmax(a, b);
 }
 
 double minValue(double a, double b)
 {
-    return (a < b) ? a : b;
+    return fmin(a, b);
 }
 
 double absValue(double x)
