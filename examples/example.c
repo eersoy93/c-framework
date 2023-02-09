@@ -7,33 +7,33 @@
 
 int main(void)
 {
-    println("Example");
-    print("\n");
+    printlnString("Example");
+    printString("\n");
 
-    print("Enter a integer: ");
+    printString("Enter a integer: ");
     int x = getInt();
 
-    print("Enter a integer: ");
+    printString("Enter a integer: ");
     int y = getInt();
 
-    print("Enter a floating-point number: ");
+    printString("Enter a floating-point number: ");
     double z = getDouble();
 
-    print("Enter a string: ");
+    printString("Enter a string: ");
     char * str1 = getString();
 
-    print("Max number between the integers: ");
+    printString("Max number between the integers: ");
     printlnInt(maxValue(x, y));
 
-    print("Min number between the integers: ");
+    printString("Min number between the integers: ");
     printlnInt(minValue(x, y));
 
-    print("Absolute value of the floating-point number: ");
+    printString("Absolute value of the floating-point number: ");
     printlnDouble(absValue(z));
 
-    print("Reverse of the string: ");
+    printString("Reverse of the string: ");
     char * str2 = reversedString(str1);
-    println(str2);
+    printlnString(str2);
 
     freeMemoryArea(str1);
     freeMemoryArea(str2);

@@ -7,14 +7,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void print(char *text);
-void println(char *text);
-
 void printDouble(double value);
 void printlnDouble(double value);
-
 void printInt(int value);
 void printlnInt(int value);
+void printString(char *text);
+void printlnString(char *text);
 
 double getDouble();
 int getInt();
