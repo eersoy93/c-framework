@@ -2,81 +2,123 @@
 
 #include "../include/strings.h"
 
-int stringCompare(char * str1, char * str2)
+SizeIntegerType stringLength(StringType str)
 {
-    return strcmp(str1, str2);
+    SizeIntegerType returnedValue;
+    returnedValue.value = wcslen(str.value);
+    return returnedValue;
 }
 
-int stringContains(char * str, char * substr)
+SizeIntegerType stringLengthFromValue(wint_t * strvalue)
 {
-    char * occurrence = strstr(str, substr);
+    SizeIntegerType returnedValue;
+    returnedValue.value = wcslen(strvalue);
+    return returnedValue;
+}
 
+wint_t stringValue(StringType str)
+{
+    return str.value;
+}
+
+StringType stringCreate(wint_t * strvalue)
+{
+    StringType returnedValue;
+    returnedValue.value = strvalue;
+
+    SizeIntegerType length;
+    length.value = wcslen(strvalue);
+    returnedValue.length = length;
+
+    return returnedValue;
+}
+
+IntegerType stringCompare(StringType str1, StringType str2)
+{
+    IntegerType returnedValue;
+    returnedValue.value = wcscmp(str1.value, str2.value);
+    return returnedValue;
+}
+
+IntegerType stringContains(StringType str, StringType substr)
+{
+    StringType * occurrence;
+    occurrence->value = wcsstr(str.value, substr.value);
+
+    IntegerType returnedValue;
     if (occurrence == NULL)
     {
-        return 0;
+        returnedValue.value = 0;
+        return returnedValue;
     }
     else
     {
-        return 1;
+        returnedValue.value = 1;
+        return returnedValue;
     }
 }
 
-int stringLength(char * str)
+StringType concatenatedString(StringType str1, StringType str2)
 {
-    return strlen(str);
+    SizeIntegerType lenstr1 = stringLength(str1);
+    SizeIntegerType lenstr2 = stringLength(str2);
+
+    StringType returnedValue;
+    returnedValue.value = (wint_t *)calloc(1, (lenstr1.value + lenstr2.value + 1) * sizeof(wint_t));
+    wcscpy(returnedValue.value, str1.value);
+    wcscat(returnedValue.value, str2.value);
+    return returnedValue;
 }
 
-char * concatenatedString(char * str1, char * str2)
+StringType loweredString(StringType str)
 {
-    int lenstr1 = strlen(str1);
-    int lenstr2 = strlen(str2);
-    char * result = (char *)calloc(1, lenstr1 + lenstr2 + 1);
-    strcpy(result, str1);
-    strcat(result, str2);
-    return result;
-}
+    SizeIntegerType lenstr = stringLength(str);
 
-char * loweredString(char * str)
-{
-    int lenstr = stringLength(str);
-    char * result = (char *)calloc(1, lenstr + 1);
+    StringType returnedValue;
+    returnedValue.value = (wint_t *)calloc(1, (lenstr.value + 1) * sizeof(wint_t));
 
-    for (int i = 0; i < lenstr; i++)
+    IntegerType i;
+    for (i.value = 0; i.value < lenstr.value; (i.value)++)
     {
-        result[i] = tolower(str[i]);
+        returnedValue.value[i.value] = towlower(str.value[i.value]);
     }
 
-    result[lenstr] = '\0';
+    returnedValue.value[lenstr.value] = L"\0";
 
-    return result;
+    return returnedValue;
 }
 
-char * upperedString(char * str)
+StringType upperedString(StringType str)
 {
-    int lenstr = stringLength(str);
-    char * result = (char *)calloc(1, lenstr + 1);
+    SizeIntegerType lenstr = stringLength(str);
 
-    for (int i = 0; i < lenstr; i++)
+    StringType returnedValue;
+    returnedValue.value = (wint_t *)calloc(1, (lenstr.value + 1) * sizeof(wint_t));
+
+    IntegerType i;
+    for (i.value = 0; i.value < lenstr.value; (i.value)++)
     {
-        result[i] = toupper(str[i]);
+        returnedValue.value[i.value] = towupper(str.value[i.value]);
     }
 
-    result[lenstr] = '\0';
+    returnedValue.value[lenstr.value] = L"\0";
 
-    return result;
+    return returnedValue;
 }
 
-char * reversedString(char * str)
+StringType reversedString(StringType str)
 {
-    size_t lenstr = stringLength(str);
-    char * reversedString = calloc(1, sizeof(char) * (lenstr + 1));
+    SizeIntegerType lenstr = stringLength(str);
+    StringType returnedValue;
+    returnedValue.value = calloc(1, (lenstr.value + 1) * sizeof(wint_t));
 
-    for (int i = 0; i < (int)lenstr; i++)
+    IntegerType i;
+    for (i.value = 0; i.value < lenstr.value; (i.value)++)
     {
-        reversedString[i] = str[lenstr - i - 1];
+        returnedValue.value[i.value] = str.value[lenstr.value - i.value - 1];
     }
 
-    reversedString[lenstr] = '\0';
+    returnedValue.value[lenstr.value] = L"\0";
 
-    return reversedString;
+    return returnedValue;
 }

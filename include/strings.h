@@ -3,19 +3,24 @@
 #ifndef STRINGS_H
 #define STRINGS_H
 
+#include "types.h"
 #include <ctype.h>
 #include <stdlib.h>
 #include <string.h>
 
 #define MAX_STR_LEN 256
 
-int stringCompare(char * str1, char * str2);
-int stringContains(char * str, char * substr);
-int stringLength(char * str);
+SizeIntegerType stringLength(StringType str);
+SizeIntegerType stringLengthFromValue(wint_t * strvalue);
+wint_t stringValue(StringType str);
 
-char * concatenatedString(char * str1, char * str2);
-char * loweredString(char * str);
-char * upperedString(char * str);
-char * reversedString(char * str);
+StringType stringCreate(wint_t * strvalue);
+IntegerType stringCompare(StringType str1, StringType str2);
+IntegerType stringContains(StringType str, StringType substr);
+
+StringType concatenatedString(StringType str1, StringType str2);
+StringType loweredString(StringType str);
+StringType upperedString(StringType str);
+StringType reversedString(StringType str);
 
 #endif
