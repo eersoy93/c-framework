@@ -17,6 +17,11 @@ double square_root(double num)
     return sqrt(num);
 }
 
+double cubic_root(double num)
+{
+    return cbrt(num);
+}
+
 double logarithm2(double num)
 {
     return log2(num);
@@ -32,7 +37,12 @@ double logarithm_natural(double num)
     return log(num);
 }
 
-double naturalExponentional(double num)
+double exponentional2(double num)
+{
+    return exp2(num);
+}
+
+double exponentional_natural(double num)
 {
     return exp(num);
 }
@@ -87,7 +97,7 @@ double hyperbolicTangent(double num)
     return tanh(num);
 }
 
-double degreesToRadians(double num) 
+double degreesToRadians(double num)
 {
     return num * M_PI / 180;
 }
@@ -137,7 +147,8 @@ double ceilingValue(double num)
     return ceil(num);
 }
 
-double fractionalValue(double num) {
+double fractionalValue(double num)
+{
     return (num - floor(num));
 }
 

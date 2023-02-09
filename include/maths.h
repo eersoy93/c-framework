@@ -6,13 +6,17 @@
 #include <math.h>
 
 double power(double base, double exponent);
+
 double nth_root(double num, int n);
 double square_root(double num);
+double cubic_root(double num);
 
 double logarithm2(double num);
 double logarithm10(double num);
 double logarithm_natural(double num);
-double naturalExponentional(double num);
+
+double exponentional2(double num);
+double exponentional_natural(double num);
 
 double cosine(double num);
 double sine(double num);
