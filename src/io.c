@@ -23,16 +23,6 @@ void printlnDouble(double value)
     printf("%lf\n", value);
 }
 
-void printFloat(float value)
-{
-    printf("%f", value);
-}
-
-void printlnFloat(float value)
-{
-    printf("%f\n", value);
-}
-
 void printInt(int value)
 {
     printf("%d", value);
@@ -48,14 +38,6 @@ double getDouble()
     char number_str[MAX_STR_LEN] = { '\0' };
     fgets(number_str, MAX_STR_LEN, stdin);
     double number = atof(number_str);
-    return number;
-}
-
-float getFloat()
-{
-    char number_str[MAX_STR_LEN] = { '\0' };
-    fgets(number_str, MAX_STR_LEN, stdin);
-    float number = (float)atof(number_str);
     return number;
 }
 

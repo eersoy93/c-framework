@@ -8,11 +8,9 @@
 void freeMemoryArea(void * memory_area);
 
 void swap_double(double * a, double * b);
-void swap_float(float * a, float * b);
 void swap_int(int * a, int * b);
 
 void sort_double(double arr[], int n, _Bool ascending);
-void sort_float(float arr[], int n, _Bool ascending);
 void sort_int(int arr[], int n, _Bool ascending);
 
 #endif
