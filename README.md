@@ -1,7 +1,7 @@
 # c-framework
 My C framework for Linux OSes to practice and learn.
 
-It aims to minimize the usage of other librariees directly.
+It aims to minimize the usage of other libraries directly.
 
 This is being written with the help of ChatGPT.
 
