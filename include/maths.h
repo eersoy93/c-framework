@@ -11,6 +11,8 @@ double nth_root(double num, int n);
 double square_root(double num);
 double cubic_root(double num);
 
+double hypotenuse(double a, double b);
+
 double logarithm2(double num);
 double logarithm10(double num);
 double logarithm_natural(double num);
@@ -31,6 +33,10 @@ double hyperbolicSine(double num);
 double hyperbolicCosine(double num);
 double hyperbolicTangent(double num);
 
+double arSine(double num);
+double arCosine(double num);
+double arTangent(double num);
+
 double degreesToRadians(double num);
 double radiansToDegrees(double num);
 
@@ -43,7 +49,7 @@ double absValue(double num);
 double roundingValue(double num);
 double flooringValue(double num);
 double ceilingValue(double num);
-double fractionalValue(double num);
+double truncatedValue(double num);
 
 int factorial(int n);
 int permutation(int n, int k);

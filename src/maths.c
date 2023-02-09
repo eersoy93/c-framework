@@ -22,6 +22,11 @@ double cubic_root(double num)
     return cbrt(num);
 }
 
+double hypotenuse(double a, double b)
+{
+    return hypot(a, b);
+}
+
 double logarithm2(double num)
 {
     return log2(num);
@@ -97,6 +102,21 @@ double hyperbolicTangent(double num)
     return tanh(num);
 }
 
+double arSine(double num)
+{
+    return asinh(num);
+}
+
+double arCosine(double num)
+{
+    return acosh(num);
+}
+
+double arTangent(double num)
+{
+    return atanh(num);
+}
+
 double degreesToRadians(double num)
 {
     return num * M_PI / 180;
@@ -147,9 +167,9 @@ double ceilingValue(double num)
     return ceil(num);
 }
 
-double fractionalValue(double num)
+double truncatedValue(double num)
 {
-    return (num - floor(num));
+    return trunc(num);
 }
 
 int factorial(int n)
