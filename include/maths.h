@@ -3,59 +3,71 @@
 #ifndef MATHS_H
 #define MATHS_H
 
+#include "types.h"
 #include <math.h>
 
-double power(double base, double exponent);
 
-double nth_root(double num, int n);
-double square_root(double num);
-double cubic_root(double num);
+FloatingPointType add(FloatingPointType a, FloatingPointType b);
+FloatingPointType sub(FloatingPointType a, FloatingPointType b);
+FloatingPointType mul(FloatingPointType a, FloatingPointType b);
+FloatingPointType div(FloatingPointType a, FloatingPointType b);
+IntegerType addInt(IntegerType a, IntegerType b);
+IntegerType subInt(IntegerType a, IntegerType b);
+IntegerType mulInt(IntegerType a, IntegerType b);
+IntegerType divInt(IntegerType a, IntegerType b);
+IntegerType modInt(IntegerType a, IntegerType b);
 
-double hypotenuse(double a, double b);
+FloatingPointType power(FloatingPointType base, FloatingPointType exponent);
 
-double logarithm2(double num);
-double logarithm10(double num);
-double logarithm_natural(double num);
+FloatingPointType nth_root(FloatingPointType num, IntegerType n);
+FloatingPointType square_root(FloatingPointType num);
+FloatingPointType cubic_root(FloatingPointType num);
 
-double exponentional2(double num);
-double exponentional_natural(double num);
+FloatingPointType hypotenuse(FloatingPointType a, FloatingPointType b);
 
-double cosine(double num);
-double sine(double num);
-double tangent(double num);
+FloatingPointType logarithm2(FloatingPointType num);
+FloatingPointType logarithm10(FloatingPointType num);
+FloatingPointType logarithm_natural(FloatingPointType num);
 
-double arcSine(double num);
-double arcCosine(double num);
-double arcTangent(double num);
-double arcTangent2(double a, double b);
+FloatingPointType exponentional2(FloatingPointType num);
+FloatingPointType exponentional_natural(FloatingPointType num);
 
-double hyperbolicSine(double num);
-double hyperbolicCosine(double num);
-double hyperbolicTangent(double num);
+FloatingPointType cosine(FloatingPointType num);
+FloatingPointType sine(FloatingPointType num);
+FloatingPointType tangent(FloatingPointType num);
 
-double arSine(double num);
-double arCosine(double num);
-double arTangent(double num);
+FloatingPointType arcSine(FloatingPointType num);
+FloatingPointType arcCosine(FloatingPointType num);
+FloatingPointType arcTangent(FloatingPointType num);
+FloatingPointType arcTangent2(FloatingPointType a, FloatingPointType b);
 
-double degreesToRadians(double num);
-double radiansToDegrees(double num);
+FloatingPointType hyperbolicSine(FloatingPointType num);
+FloatingPointType hyperbolicCosine(FloatingPointType num);
+FloatingPointType hyperbolicTangent(FloatingPointType num);
 
-double maxValue(double a, double b);
-double minValue(double a, double b);
-double modValue(double a, double b);
-double remainderValue(double a, double b);
+FloatingPointType arSine(FloatingPointType num);
+FloatingPointType arCosine(FloatingPointType num);
+FloatingPointType arTangent(FloatingPointType num);
 
-double absValue(double num);
-double roundingValue(double num);
-double flooringValue(double num);
-double ceilingValue(double num);
-double truncatedValue(double num);
+FloatingPointType degreesToRadians(FloatingPointType num);
+FloatingPointType radiansToDegrees(FloatingPointType num);
 
-int factorial(int n);
-int permutation(int n, int k);
-int combination(int n, int k);
+FloatingPointType maxValue(FloatingPointType a, FloatingPointType b);
+FloatingPointType minValue(FloatingPointType a, FloatingPointType b);
+FloatingPointType modValue(FloatingPointType a, FloatingPointType b);
+FloatingPointType remainderValue(FloatingPointType a, FloatingPointType b);
 
-int gcd(int a, int b);
-int lcm(int a, int b);
+FloatingPointType absValue(FloatingPointType num);
+FloatingPointType roundingValue(FloatingPointType num);
+FloatingPointType flooringValue(FloatingPointType num);
+FloatingPointType ceilingValue(FloatingPointType num);
+FloatingPointType truncatedValue(FloatingPointType num);
+
+IntegerType factorial(IntegerType n);
+IntegerType permutation(IntegerType n, IntegerType k);
+IntegerType combination(IntegerType n, IntegerType k);
+
+IntegerType gcd(IntegerType a, IntegerType b);
+IntegerType lcm(IntegerType a, IntegerType b);
 
 #endif

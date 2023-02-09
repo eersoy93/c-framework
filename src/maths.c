@@ -2,215 +2,370 @@
 
 #include "../include/maths.h"
 
-double power(double base, double exponent)
+FloatingPointType add(FloatingPointType a, FloatingPointType b)
 {
-    return pow(base, exponent);
+    FloatingPointType returnedValue;
+    returnedValue.value = a.value + b.value;
+    return returnedValue;
 }
 
-double nth_root(double num, int n)
+FloatingPointType sub(FloatingPointType a, FloatingPointType b)
 {
-    return power(num, 1.0 / n);
+    FloatingPointType returnedValue;
+    returnedValue.value = a.value - b.value;
+    return returnedValue;
 }
 
-double square_root(double num)
+FloatingPointType mul(FloatingPointType a, FloatingPointType b)
 {
-    return sqrt(num);
+    FloatingPointType returnedValue;
+    returnedValue.value = a.value * b.value;
+    return returnedValue;
 }
 
-double cubic_root(double num)
+FloatingPointType div(FloatingPointType a, FloatingPointType b)
 {
-    return cbrt(num);
+    FloatingPointType returnedValue;
+    returnedValue.value = a.value / b.value;
+    return returnedValue;
 }
 
-double hypotenuse(double a, double b)
+IntegerType addInt(IntegerType a, IntegerType b)
 {
-    return hypot(a, b);
+    IntegerType returnedValue;
+    returnedValue.value = a.value + b.value;
+    return returnedValue;
 }
 
-double logarithm2(double num)
+IntegerType subInt(IntegerType a, IntegerType b)
 {
-    return log2(num);
+    IntegerType returnedValue;
+    returnedValue.value = a.value - b.value;
+    return returnedValue;
 }
 
-double logarithm10(double num)
+IntegerType mulInt(IntegerType a, IntegerType b)
 {
-    return log10(num);
+    IntegerType returnedValue;
+    returnedValue.value = a.value * b.value;
+    return returnedValue;
 }
 
-double logarithm_natural(double num)
+IntegerType divInt(IntegerType a, IntegerType b)
 {
-    return log(num);
+    IntegerType returnedValue;
+    returnedValue.value = a.value / b.value;
+    return returnedValue;
 }
 
-double exponentional2(double num)
+IntegerType modInt(IntegerType a, IntegerType b)
 {
-    return exp2(num);
+    IntegerType returnedValue;
+    returnedValue.value = a.value % b.value;
+    return returnedValue;
 }
 
-double exponentional_natural(double num)
+FloatingPointType power(FloatingPointType base, FloatingPointType exponent)
 {
-    return exp(num);
+    FloatingPointType returnedValue;
+    returnedValue.value = pow(base.value, exponent.value);
+    return returnedValue;
 }
 
-double cosine(double num)
+FloatingPointType nth_root(FloatingPointType num, IntegerType n)
 {
-    return cos(num);
+    FloatingPointType returnedValue;
+    returnedValue.value = pow(num.value, 1.0 / n.value);
+    return returnedValue;
 }
 
-double sine(double num)
+FloatingPointType square_root(FloatingPointType num)
 {
-    return sin(num);
+    FloatingPointType returnedValue;
+    returnedValue.value = sqrt(num.value);
+    return returnedValue;
 }
 
-double tangent(double num)
+FloatingPointType cubic_root(FloatingPointType num)
 {
-    return tan(num);
+    FloatingPointType returnedValue;
+    returnedValue.value = cbrt(num.value);
+    return returnedValue;
 }
 
-double arcSine(double num)
+FloatingPointType hypotenuse(FloatingPointType a, FloatingPointType b)
 {
-    return asin(num);
+    FloatingPointType returnedValue;
+    returnedValue.value = hypot(a.value, b.value);
+    return returnedValue;
 }
 
-double arcCosine(double num)
+FloatingPointType logarithm2(FloatingPointType num)
 {
-    return acos(num);
+    FloatingPointType returnedValue;
+    returnedValue.value = log2(num.value);
+    return returnedValue;
 }
 
-double arcTangent(double num)
+FloatingPointType logarithm10(FloatingPointType num)
 {
-    return atan(num);
+    FloatingPointType returnedValue;
+    returnedValue.value = log10(num.value);
+    return returnedValue;
 }
 
-double arcTangent2(double a, double b)
+FloatingPointType logarithm_natural(FloatingPointType num)
 {
-    return atan2(b, a);
+    FloatingPointType returnedValue;
+    returnedValue.value = log(num.value);
+    return returnedValue;
 }
 
-double hyperbolicSine(double num)
+FloatingPointType exponentional2(FloatingPointType num)
 {
-    return sinh(num);
+    FloatingPointType returnedValue;
+    returnedValue.value = exp2(num.value);
+    return returnedValue;
 }
 
-double hyperbolicCosine(double num)
+FloatingPointType exponentional_natural(FloatingPointType num)
 {
-    return cosh(num);
+    FloatingPointType returnedValue;
+    returnedValue.value = exp(num.value);
+    return returnedValue;
 }
 
-double hyperbolicTangent(double num)
+FloatingPointType cosine(FloatingPointType num)
 {
-    return tanh(num);
+    FloatingPointType returnedValue;
+    returnedValue.value = cos(num.value);
+    return returnedValue;
 }
 
-double arSine(double num)
+FloatingPointType sine(FloatingPointType num)
 {
-    return asinh(num);
+    FloatingPointType returnedValue;
+    returnedValue.value = sin(num.value);
+    return returnedValue;
 }
 
-double arCosine(double num)
+FloatingPointType tangent(FloatingPointType num)
 {
-    return acosh(num);
+    FloatingPointType returnedValue;
+    returnedValue.value = tan(num.value);
+    return returnedValue;
 }
 
-double arTangent(double num)
+FloatingPointType arcSine(FloatingPointType num)
 {
-    return atanh(num);
+    FloatingPointType returnedValue;
+    returnedValue.value = asin(num.value);
+    return returnedValue;
 }
 
-double degreesToRadians(double num)
+FloatingPointType arcCosine(FloatingPointType num)
 {
-    return num * M_PI / 180;
+    FloatingPointType returnedValue;
+    returnedValue.value = acos(num.value);
+    return returnedValue;
 }
 
-double radiansToDegrees(double num)
+FloatingPointType arcTangent(FloatingPointType num)
 {
-    return num * 180 / M_PI;
+    FloatingPointType returnedValue;
+    returnedValue.value = atan(num.value);
+    return returnedValue;
 }
 
-double maxValue(double a, double b)
+FloatingPointType arcTangent2(FloatingPointType a, FloatingPointType b)
 {
-    return fmax(a, b);
+    FloatingPointType returnedValue;
+    returnedValue.value = atan2(b.value, a.value);
+    return returnedValue;
 }
 
-double minValue(double a, double b)
+FloatingPointType hyperbolicSine(FloatingPointType num)
 {
-    return fmin(a, b);
+    FloatingPointType returnedValue;
+    returnedValue.value = sinh(num.value);
+    return returnedValue;
 }
 
-double modValue(double a, double b)
+FloatingPointType hyperbolicCosine(FloatingPointType num)
 {
-    return fmod(a, b);
+    FloatingPointType returnedValue;
+    returnedValue.value = cosh(num.value);
+    return returnedValue;
 }
 
-double remainderValue(double a, double b)
+FloatingPointType hyperbolicTangent(FloatingPointType num)
 {
-    return remainder(a, b);
+    FloatingPointType returnedValue;
+    returnedValue.value = tanh(num.value);
+    return returnedValue;
 }
 
-double absValue(double num)
+FloatingPointType arSine(FloatingPointType num)
 {
-    return fabs(num);
+    FloatingPointType returnedValue;
+    returnedValue.value = asinh(num.value);
+    return returnedValue;
 }
 
-double roundingValue(double num)
+FloatingPointType arCosine(FloatingPointType num)
 {
-    return round(num);
+    FloatingPointType returnedValue;
+    returnedValue.value = acosh(num.value);
+    return returnedValue;
 }
 
-double flooringValue(double num)
+FloatingPointType arTangent(FloatingPointType num)
 {
-    return floor(num);
+    FloatingPointType returnedValue;
+    returnedValue.value = atanh(num.value);
+    return returnedValue;
 }
 
-double ceilingValue(double num)
+FloatingPointType degreesToRadians(FloatingPointType num)
 {
-    return ceil(num);
+    FloatingPointType returnedValue;
+    returnedValue.value = num.value * M_PI / 180;
+    return returnedValue;
 }
 
-double truncatedValue(double num)
+FloatingPointType radiansToDegrees(FloatingPointType num)
 {
-    return trunc(num);
+    FloatingPointType returnedValue;
+    returnedValue.value = num.value * 180 / M_PI;
+    return returnedValue;
 }
 
-int factorial(int n)
+FloatingPointType maxValue(FloatingPointType a, FloatingPointType b)
 {
-    if (n < 0)
+    FloatingPointType returnedValue;
+    returnedValue.value = fmax(a.value, b.value);
+    return returnedValue;
+}
+
+FloatingPointType minValue(FloatingPointType a, FloatingPointType b)
+{
+    FloatingPointType returnedValue;
+    returnedValue.value = fmin(a.value, b.value);
+    return returnedValue;
+}
+
+FloatingPointType modValue(FloatingPointType a, FloatingPointType b)
+{
+    FloatingPointType returnedValue;
+    returnedValue.value = fmod(a.value, b.value);
+    return returnedValue;
+}
+
+FloatingPointType remainderValue(FloatingPointType a, FloatingPointType b)
+{
+    FloatingPointType returnedValue;
+    returnedValue.value = remainder(a.value, b.value);
+    return returnedValue;
+}
+
+FloatingPointType absValue(FloatingPointType num)
+{
+    FloatingPointType returnedValue;
+    returnedValue.value = fabs(num.value);
+    return returnedValue;
+}
+
+FloatingPointType roundingValue(FloatingPointType num)
+{
+    FloatingPointType returnedValue;
+    returnedValue.value = round(num.value);
+    return returnedValue;
+}
+
+FloatingPointType flooringValue(FloatingPointType num)
+{
+    FloatingPointType returnedValue;
+    returnedValue.value = floor(num.value);
+    return returnedValue;
+}
+
+FloatingPointType ceilingValue(FloatingPointType num)
+{
+    FloatingPointType returnedValue;
+    returnedValue.value = ceil(num.value);
+    return returnedValue;
+}
+
+FloatingPointType truncatedValue(FloatingPointType num)
+{
+    FloatingPointType returnedValue;
+    returnedValue.value = trunc(num.value);
+    return returnedValue;
+}
+
+IntegerType factorial(IntegerType n)
+{
+    IntegerType returnedValue;
+
+    if (n.value < 0)
     {
-        return -1;
+        returnedValue.value = -1;
+        return returnedValue;
     }
-    if (n == 0 || n == 1)
+    if (n.value == 0 || n.value == 1)
     {
-        return 1;
+        returnedValue.value = 1;
+        return returnedValue;
     }
-    if (n > 1)
+    if (n.value > 1)
     {
-        return n * factorial(n - 1);
+        IntegerType interValue;
+        interValue.value = n.value - 1;
+        returnedValue = factorial(interValue);
+        return returnedValue;
     }
 
-    return -1;
+    returnedValue.value = -1;
+    return returnedValue;
 }
 
-int permutation(int n, int k)
+IntegerType permutation(IntegerType n, IntegerType k)
 {
-    return factorial(n) / factorial(k);
+    IntegerType returnedValue;
+    returnedValue.value = factorial(n).value / factorial(k).value;
+    return returnedValue;
 }
 
-int combination(int n, int k)
+IntegerType combination(IntegerType n, IntegerType k)
 {
-    return combination(n, k) / factorial(n - k);
+    IntegerType interValue;
+    interValue.value = n.value - k.value;
+
+    IntegerType returnedValue;
+    returnedValue.value = combination(n, k).value / factorial(interValue).value;
+
+    return returnedValue;
 }
 
-int gcd(int a, int b)
+IntegerType gcd(IntegerType a, IntegerType b)
 {
-    if (b == 0)
+    IntegerType returnedValue;
+
+    if (b.value == 0)
     {
-        return a;
+        returnedValue.value = a.value;
+        return returnedValue;
     }
 
-    return gcd(b, a % b);
+    IntegerType interValue;
+    interValue.value = a.value % b.value;
+    returnedValue.value = gcd(b, interValue).value;
+    return returnedValue;
 }
 
-int lcm(int a, int b)
+IntegerType lcm(IntegerType a, IntegerType b)
 {
-    return (a * b) / gcd(a, b);
+    IntegerType returnedValue;
+    returnedValue.value = (a.value * b.value) / gcd(a, b).value;
+    return returnedValue;
 }
