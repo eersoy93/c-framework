@@ -67,9 +67,9 @@ double arcTangent(double num)
     return atan(num);
 }
 
-double arcTangent2(double y, double x)
+double arcTangent2(double a, double b)
 {
-    return atan2(y, x);
+    return atan2(b, a);
 }
 
 double hyperbolicSine(double num)
@@ -107,9 +107,19 @@ double minValue(double a, double b)
     return fmin(a, b);
 }
 
-double absValue(double x)
+double modValue(double a, double b)
 {
-    return fabs(x);
+    return fmod(a, b);
+}
+
+double remainderValue(double a, double b)
+{
+    return remainder(a, b);
+}
+
+double absValue(double num)
+{
+    return fabs(num);
 }
 
 double roundingValue(double num)

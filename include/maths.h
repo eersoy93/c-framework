@@ -21,7 +21,7 @@ double tangent(double num);
 double arcSine(double num);
 double arcCosine(double num);
 double arcTangent(double num);
-double arcTangent2(double y, double x);
+double arcTangent2(double a, double b);
 
 double hyperbolicSine(double num);
 double hyperbolicCosine(double num);
@@ -32,7 +32,10 @@ double radiansToDegrees(double num);
 
 double maxValue(double a, double b);
 double minValue(double a, double b);
-double absValue(double x);
+double modValue(double a, double b);
+double remainderValue(double a, double b);
+
+double absValue(double num);
 double roundingValue(double num);
 double flooringValue(double num);
 double ceilingValue(double num);
