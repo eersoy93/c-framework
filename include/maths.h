@@ -5,16 +5,13 @@
 
 #include <math.h>
 
-int max(int a, int b);
-int min(int a, int b);
-
 double power(double base, double exponent);
 double nth_root(double num, int n);
 double square_root(double num);
 
-double logarithm(double num);
 double logarithm2(double num);
 double logarithm10(double num);
+double logarithm_natural(double num);
 double naturalExponentional(double num);
 
 double cosine(double num);
@@ -33,6 +30,8 @@ double hyperbolicTangent(double num);
 double degreesToRadians(double num);
 double radiansToDegrees(double num);
 
+double maxValue(double a, double b);
+double minValue(double a, double b);
 double absValue(double x);
 double roundingValue(double num);
 double flooringValue(double num);

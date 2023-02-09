@@ -2,16 +2,6 @@
 
 #include "../include/maths.h"
 
-int max(int a, int b)
-{
-    return (a > b) ? a : b;
-}
-
-int min(int a, int b)
-{
-    return (a < b) ? a : b;
-}
-
 double power(double base, double exponent)
 {
     return pow(base, exponent);
@@ -27,11 +17,6 @@ double square_root(double num)
     return sqrt(num);
 }
 
-double logarithm(double num)
-{
-    return log(num);
-}
-
 double logarithm2(double num)
 {
     return log2(num);
@@ -40,6 +25,11 @@ double logarithm2(double num)
 double logarithm10(double num)
 {
     return log10(num);
+}
+
+double logarithm_natural(double num)
+{
+    return log(num);
 }
 
 double naturalExponentional(double num)
@@ -105,6 +95,16 @@ double degreesToRadians(double num)
 double radiansToDegrees(double num)
 {
     return num * 180 / M_PI;
+}
+
+double maxValue(double a, double b)
+{
+    return (a > b) ? a : b;
+}
+
+double minValue(double a, double b)
+{
+    return (a < b) ? a : b;
 }
 
 double absValue(double x)

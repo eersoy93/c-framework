@@ -23,10 +23,10 @@ int main(void)
     char * str1 = getString();
 
     print("Max number between the integers: ");
-    printlnInt(max(x, y));
+    printlnInt(maxValue(x, y));
 
     print("Min number between the integers: ");
-    printlnInt(min(x, y));
+    printlnInt(minValue(x, y));
 
     print("Absolute value of the floating-point number: ");
     printlnDouble(absValue(z));
