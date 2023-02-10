@@ -42,11 +42,10 @@ IntegerType stringCompare(StringType str1, StringType str2)
 
 IntegerType stringContains(StringType str, StringType substr)
 {
-    StringType * occurrence;
-    occurrence->value = wcsstr(str.value, substr.value);
+    StringType occurrence = stringCreate(wcsstr(str.value, substr.value));
 
     IntegerType returnedValue;
-    if (occurrence == NULL)
+    if (occurrence.value == NULL)
     {
         returnedValue.value = 0;
         return returnedValue;
@@ -63,8 +62,7 @@ StringType concatenatedString(StringType str1, StringType str2)
     SizeIntegerType lenstr1 = stringLength(str1);
     SizeIntegerType lenstr2 = stringLength(str2);
 
-    StringType returnedValue;
-    returnedValue.value = (wint_t *)calloc(1, (lenstr1.value + lenstr2.value + 1) * sizeof(wint_t));
+    StringType returnedValue = stringCreate((wint_t *)calloc(1, (lenstr1.value + lenstr2.value + 1) * sizeof(wint_t)));
     wcscpy(returnedValue.value, str1.value);
     wcscat(returnedValue.value, str2.value);
     return returnedValue;
@@ -74,8 +72,7 @@ StringType loweredString(StringType str)
 {
     SizeIntegerType lenstr = stringLength(str);
 
-    StringType returnedValue;
-    returnedValue.value = (wint_t *)calloc(1, (lenstr.value + 1) * sizeof(wint_t));
+    StringType returnedValue = stringCreate((wint_t *)calloc(1, (lenstr.value + 1) * sizeof(wint_t)));
 
     IntegerType i;
     for (i.value = 0; i.value < lenstr.value; (i.value)++)
@@ -92,8 +89,7 @@ StringType upperedString(StringType str)
 {
     SizeIntegerType lenstr = stringLength(str);
 
-    StringType returnedValue;
-    returnedValue.value = (wint_t *)calloc(1, (lenstr.value + 1) * sizeof(wint_t));
+    StringType returnedValue = stringCreate((wint_t *)calloc(1, (lenstr.value + 1) * sizeof(wint_t)));
 
     IntegerType i;
     for (i.value = 0; i.value < lenstr.value; (i.value)++)
@@ -109,8 +105,7 @@ StringType upperedString(StringType str)
 StringType reversedString(StringType str)
 {
     SizeIntegerType lenstr = stringLength(str);
-    StringType returnedValue;
-    returnedValue.value = calloc(1, (lenstr.value + 1) * sizeof(wint_t));
+    StringType returnedValue = stringCreate(calloc(1, (lenstr.value + 1) * sizeof(wint_t)));
 
     IntegerType i;
     for (i.value = 0; i.value < lenstr.value; (i.value)++)

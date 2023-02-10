@@ -3,19 +3,20 @@
 #ifndef IO_H
 #define IO_H
 
+#include "types.h"
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-void printDouble(double value);
-void printlnDouble(double value);
-void printInt(int value);
-void printlnInt(int value);
-void printString(char *text);
-void printlnString(char *text);
+void printFloatingPoint(FloatingPointType number);
+void printlnFloatingPoint(FloatingPointType number);
+void printInt(IntegerType number);
+void printlnInt(IntegerType number);
+void printString(StringType str);
+void printlnString(StringType str);
 
-double getDouble();
-int getInt();
-char * getString();
+FloatingPointType getNumber();
+IntegerType getNumberInt();
+StringType getString();
 
 #endif

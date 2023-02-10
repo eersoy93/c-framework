@@ -3,56 +3,60 @@
 #include "../include/io.h"
 #include "../include/strings.h"
 
-void printDouble(double value)
+void printFloatingPoint(FloatingPointType number)
 {
-    printf("%lf", value);
+    printf("%lf", number.value);
 }
 
-void printlnDouble(double value)
+void printlnFloatingPoint(FloatingPointType number)
 {
-    printf("%lf\n", value);
+    printf("%lf\n", number.value);
 }
 
-void printInt(int value)
+void printInt(IntegerType number)
 {
-    printf("%d", value);
+    printf("%d", number.value);
 }
 
-void printlnInt(int value)
+void printlnInt(IntegerType number)
 {
-    printf("%d\n", value);
+    printf("%d\n", number.value);
 }
 
-void printString(char *text)
+void printString(StringType str)
 {
-    printf("%s", text);
+    printf("%s", str.value);
 }
 
-void printlnString(char *text)
+void printlnString(StringType str)
 {
-    printf("%s\n", text);
+    printf("%s\n", str.value);
 }
 
-double getDouble()
+FloatingPointType getNumber()
 {
-    char number_str[MAX_STR_LEN] = {'\0'};
-    fgets(number_str, MAX_STR_LEN, stdin);
-    double number = atof(number_str);
-    return number;
+    StringType number_str = stringCreate(L"\0");
+
+    fgets(number_str.value, MAX_STR_LEN, stdin);
+    FloatingPointType returnedValue;
+    returnedValue.value = atof(number_str.value);
+    return returnedValue;
 }
 
-int getInt()
+IntegerType getInt()
 {
-    char number_str[MAX_STR_LEN] = {'\0'};
-    fgets(number_str, MAX_STR_LEN, stdin);
-    int number = atoi(number_str);
-    return number;
+    StringType number_str = stringCreate(L"\0");
+
+    fgets(number_str.value, MAX_STR_LEN, stdin);
+    IntegerType returnedValue;
+    returnedValue.value = atoi(number_str.value);
+    return returnedValue;
 }
 
-char *getString()
+StringType getString()
 {
-    char *str = calloc(1, sizeof(char) * MAX_STR_LEN);
-    fgets(str, MAX_STR_LEN, stdin);
-    str[strcspn(str, "\r\n")] = '\0';
+    StringType str = stringCreate(calloc(1, sizeof(char) * MAX_STR_LEN));
+    fgets(str.value, MAX_STR_LEN, stdin);
+    str.value[strcspn(str.value, "\r\n")] = '\0';
     return str;
 }
