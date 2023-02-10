@@ -2,8 +2,8 @@
 
 #include "../include/utility.h"
 
-char * itoa(int value, char * str)
+StringType intToString(IntegerType integer, StringType str)
 {
-    sprintf(str, "%d", value);
+    sprintf(str.value, "%d", integer.value);
     return str;
 }

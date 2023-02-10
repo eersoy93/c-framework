@@ -3,8 +3,9 @@
 #ifndef UTILITY_H
 #define UTILITY_H
 
+#include "types.h"
 #include <stdio.h>
 
-char * itoa(int value, char * str);
+StringType intToString(IntegerType value, StringType str);
 
 #endif
