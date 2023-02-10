@@ -9,5 +9,7 @@
 
 int main(void)
 {
+    StringType str = stringCreate(L"Hello, World with new types!");
+    printlnString(str);
     return EXIT_SUCCESS;
 }

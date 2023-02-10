@@ -1,10 +1,10 @@
 C_SOURCES = $(wildcard src/*.c)
 
 all:
-	gcc -Wall -Wextra -Werror -std=gnu18 examples/example.c ${C_SOURCES} -o examples/example -lm
+	gcc -Wall -Wextra -Werror -std=gnu18 examples/hello.c ${C_SOURCES} -o examples/hello -lm
 
 run: all
-	examples/example
+	examples/hello
 
 clean:
-	rm -f examples/example
+	rm -f examples/hello

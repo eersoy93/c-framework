@@ -25,12 +25,12 @@ void printlnInt(IntegerType number)
 
 void printString(StringType str)
 {
-    wprintf(L"%s", str.value);
+    wprintf(L"%ls", str.value);
 }
 
 void printlnString(StringType str)
 {
-    wprintf(L"%s\n", str.value);
+    wprintf(L"%ls\n", str.value);
 }
 
 FloatingPointType getNumber()
