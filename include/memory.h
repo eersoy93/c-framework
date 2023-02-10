@@ -8,10 +8,10 @@
 
 void freeMemoryArea(VoidPtrType memory_area);
 
-void swapFloatingPoint(FloatingPointType * a, FloatingPointType * b);
+void swap(FloatingPointType * a, FloatingPointType * b);
 void swapInt(IntegerType * a, IntegerType * b);
 
-void sortFloatingPoint(FloatingPointType arr[], IntegerType n, BooleanType ascending);
+void sort(FloatingPointType arr[], IntegerType n, BooleanType ascending);
 void sortInt(IntegerType arr[], IntegerType n, BooleanType ascending);
 
 #endif
