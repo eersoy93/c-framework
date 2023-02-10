@@ -4,6 +4,6 @@
 
 StringType intToString(IntegerType integer, StringType str)
 {
-    sprintf(str.value, "%d", integer.value);
+    swprintf(str.value, integer.value, L"%d");
     return str;
 }

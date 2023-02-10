@@ -1,5 +1,8 @@
 // Generic type structs and definitions header
 
+#ifndef TYPES_H
+#define TYPES_H
+
 #include <wchar.h>
 
 typedef struct tagBooleanType
@@ -24,7 +27,7 @@ typedef struct tagSizeInteger
 
 typedef struct tagString
 {
-    wint_t * value;
+    wchar_t * value;
     SizeIntegerType length;
 } StringType;
 
@@ -32,3 +35,5 @@ typedef struct tagVoidPtr
 {
     void * value;
 } VoidPtrType;
+
+#endif

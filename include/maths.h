@@ -7,10 +7,10 @@
 #include <math.h>
 
 
-FloatingPointType add(FloatingPointType a, FloatingPointType b);
-FloatingPointType sub(FloatingPointType a, FloatingPointType b);
-FloatingPointType mul(FloatingPointType a, FloatingPointType b);
-FloatingPointType div(FloatingPointType a, FloatingPointType b);
+FloatingPointType addFloatingPoint(FloatingPointType a, FloatingPointType b);
+FloatingPointType subFloatingPoint(FloatingPointType a, FloatingPointType b);
+FloatingPointType mulFloatingPoint(FloatingPointType a, FloatingPointType b);
+FloatingPointType divFloatingPoint(FloatingPointType a, FloatingPointType b);
 IntegerType addInt(IntegerType a, IntegerType b);
 IntegerType subInt(IntegerType a, IntegerType b);
 IntegerType mulInt(IntegerType a, IntegerType b);

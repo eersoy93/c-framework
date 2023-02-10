@@ -2,28 +2,28 @@
 
 #include "../include/maths.h"
 
-FloatingPointType add(FloatingPointType a, FloatingPointType b)
+FloatingPointType addFloatingPoint(FloatingPointType a, FloatingPointType b)
 {
     FloatingPointType returnedValue;
     returnedValue.value = a.value + b.value;
     return returnedValue;
 }
 
-FloatingPointType sub(FloatingPointType a, FloatingPointType b)
+FloatingPointType subFloatingPoint(FloatingPointType a, FloatingPointType b)
 {
     FloatingPointType returnedValue;
     returnedValue.value = a.value - b.value;
     return returnedValue;
 }
 
-FloatingPointType mul(FloatingPointType a, FloatingPointType b)
+FloatingPointType mulFloatingPoint(FloatingPointType a, FloatingPointType b)
 {
     FloatingPointType returnedValue;
     returnedValue.value = a.value * b.value;
     return returnedValue;
 }
 
-FloatingPointType div(FloatingPointType a, FloatingPointType b)
+FloatingPointType divFloatingPoint(FloatingPointType a, FloatingPointType b)
 {
     FloatingPointType returnedValue;
     returnedValue.value = a.value / b.value;

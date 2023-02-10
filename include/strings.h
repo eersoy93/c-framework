@@ -7,14 +7,15 @@
 #include <ctype.h>
 #include <stdlib.h>
 #include <string.h>
+#include <wctype.h>
 
 #define MAX_STR_LEN 256
 
 SizeIntegerType stringLength(StringType str);
-SizeIntegerType stringLengthFromValue(wint_t * strvalue);
-wint_t stringValue(StringType str);
+SizeIntegerType stringLengthFromValue(wchar_t * strvalue);
+wchar_t * stringValue(StringType str);
 
-StringType stringCreate(wint_t * strvalue);
+StringType stringCreate(wchar_t * strvalue);
 IntegerType stringCompare(StringType str1, StringType str2);
 IntegerType stringContains(StringType str, StringType substr);
 

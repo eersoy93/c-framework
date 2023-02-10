@@ -33,14 +33,14 @@ void sort(FloatingPointType arr[], IntegerType n, BooleanType ascending)
             {
                 if (arr[j.value].value > arr[j.value + 1].value)
                 {
-                    swapFloatingPoint(&(arr[j.value].value), &(arr[j.value + 1].value));
+                    swap(&arr[j.value], &arr[j.value + 1]);
                 }
             }
             else
             {
                 if (arr[j.value].value < arr[j.value + 1].value)
                 {
-                    swapFloatingPoint(&(arr[j.value].value), &(arr[j.value + 1].value));
+                    swap(&arr[j.value], &arr[j.value + 1]);
                 }
             }
         }
@@ -59,14 +59,14 @@ void sortInt(IntegerType arr[], IntegerType n, BooleanType ascending)
             {
                 if (arr[j.value].value > arr[j.value + 1].value)
                 {
-                    swapInt(&(arr[j.value].value), &(arr[j.value + 1].value));
+                    swapInt(&arr[j.value], &arr[j.value + 1]);
                 }
             }
             else
             {
                 if (arr[j.value].value < arr[j.value + 1].value)
                 {
-                    swapInt(&(arr[j.value].value), &(arr[j.value + 1].value));
+                    swapInt(&arr[j.value], &arr[j.value + 1]);
                 }
             }
         }

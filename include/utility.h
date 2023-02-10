@@ -6,6 +6,6 @@
 #include "types.h"
 #include <stdio.h>
 
-StringType intToString(IntegerType value, StringType str);
+StringType intToString(IntegerType integer, StringType str);
 
 #endif
