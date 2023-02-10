@@ -2,71 +2,71 @@
 
 #include "../include/memory.h"
 
-void freeMemoryArea(void * memory_area)
+void freeMemoryArea(VoidPtrType memory_area)
 {
-    free(memory_area);
+    free(memory_area.value);
 }
 
-void swap_double(double * a, double * b)
+void swapFloatingPoint(FloatingPointType * a, FloatingPointType * b)
 {
-    double temp = *a;
-    *a = *b;
-    *b = temp;
+    double temp = a->value;
+    a->value = b->value;
+    b->value = temp;
 }
 
-void swap_int(int * a, int * b)
+void swapInt(IntegerType * a, IntegerType * b)
 {
-    int temp = *a;
-    *a = *b;
-    *b = temp;
+    int temp = a->value;
+    a->value = b->value;
+    b->value = temp;
 }
 
-void sort_double(double arr[], int n, _Bool ascending)
+void sortFloatingPoint(FloatingPointType arr[], IntegerType n, BooleanType ascending)
 {
-    int i = 0;
-    int j = 0;
-    for (i = 0; i < n - 1; i++)
+    IntegerType i;
+    IntegerType j;
+    for (i.value = 0; i.value < n.value - 1; (i.value)++)
     {
-        for (j = 0; j < n - i - 1; j++)
+        for (j.value = 0; j.value < n.value - i.value - 1; (j.value)++)
         {
-            if (ascending)
+            if (ascending.value)
             {
-                if (arr[j] > arr[j + 1])
+                if (arr[j.value].value > arr[j.value + 1].value)
                 {
-                    swap_double(&arr[j], &arr[j + 1]);
+                    swapFloatingPoint(&(arr[j.value].value), &(arr[j.value + 1].value));
                 }
             }
             else
             {
-                if (arr[j] < arr[j + 1])
+                if (arr[j.value].value < arr[j.value + 1].value)
                 {
-                    swap_double(&arr[j], &arr[j + 1]);
+                    swapFloatingPoint(&(arr[j.value].value), &(arr[j.value + 1].value));
                 }
             }
         }
     }
 }
 
-void sort_int(int arr[], int n, _Bool ascending)
+void sortInt(IntegerType arr[], IntegerType n, BooleanType ascending)
 {
-    int i = 0;
-    int j = 0;
-    for (i = 0; i < n - 1; i++)
+    IntegerType i;
+    IntegerType j;
+    for (i.value = 0; i.value < n.value - 1; (i.value)++)
     {
-        for (j = 0; j < n - i - 1; j++)
+        for (j.value = 0; j.value < n.value - i.value - 1; (j.value)++)
         {
-            if (ascending)
+            if (ascending.value)
             {
-                if (arr[j] > arr[j + 1])
+                if (arr[j.value].value > arr[j.value + 1].value)
                 {
-                    swap_int(&arr[j], &arr[j + 1]);
+                    swapInt(&(arr[j.value].value), &(arr[j.value + 1].value));
                 }
             }
             else
             {
-                if (arr[j] < arr[j + 1])
+                if (arr[j.value].value < arr[j.value + 1].value)
                 {
-                    swap_int(&arr[j], &arr[j + 1]);
+                    swapInt(&(arr[j.value].value), &(arr[j.value + 1].value));
                 }
             }
         }

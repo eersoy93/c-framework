@@ -1,6 +1,11 @@
-// Generic type structs header
+// Generic type structs and definitions header
 
 #include <wchar.h>
+
+typedef struct tagBooleanType
+{
+    _Bool value;
+} BooleanType;
 
 typedef struct tagFloatingPoint
 {
@@ -22,3 +27,8 @@ typedef struct tagString
     wint_t * value;
     SizeIntegerType length;
 } StringType;
+
+typedef struct tagVoidPtr
+{
+    void * value;
+} VoidPtrType;

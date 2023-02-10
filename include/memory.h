@@ -3,14 +3,15 @@
 #ifndef MEMORY_H
 #define MEMORY_H
 
+#include "types.h"
 #include <stdlib.h>
 
-void freeMemoryArea(void * memory_area);
+void freeMemoryArea(VoidPtrType memory_area);
 
-void swap_double(double * a, double * b);
-void swap_int(int * a, int * b);
+void swapFloatingPoint(FloatingPointType * a, FloatingPointType * b);
+void swapInt(IntegerType * a, IntegerType * b);
 
-void sort_double(double arr[], int n, _Bool ascending);
-void sort_int(int arr[], int n, _Bool ascending);
+void sortFloatingPoint(FloatingPointType arr[], IntegerType n, BooleanType ascending);
+void sortInt(IntegerType arr[], IntegerType n, BooleanType ascending);
 
 #endif
